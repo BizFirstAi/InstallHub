@@ -1,4 +1,5 @@
 # InstallHub
+**Live site:** https://bizfirstai.github.io/InstallHub/
 
 InstallHub — documentation and website source.
 
