@@ -1,0 +1,653 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/png" href="https://bizfirstai.com/website/assets/Logo/logo-m.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="InstallHub Documentation — get packages moving in minutes with the enterprise package management system by BizFirstAi.">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="InstallHub Documentation">
+  <meta property="og:description" content="Everything you need to get up and running with InstallHub, the enterprise package management system by BizFirstAi.">
+  <meta property="og:type" content="website">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="InstallHub Documentation">
+  <meta name="twitter:description" content="Get packages moving in minutes with InstallHub by BizFirstAi.">
+
+  <title>Documentation — InstallHub by BizFirstAi</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://bizfirstai.com/website/assets/css/b-index.css">
+
+  <style>
+    /* ── Docs two-column layout ──────────────────────────────── */
+    .ih-docs-layout {
+      display: grid;
+      grid-template-columns: 260px 1fr;
+      gap: 0;
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0 var(--b-space-8);
+      min-height: calc(100vh - 60px);
+    }
+
+    /* ── Sidebar ─────────────────────────────────────────────── */
+    .ih-docs-sidebar {
+      border-right: 1px solid var(--b-border-subtle);
+      padding: var(--b-space-16) var(--b-space-8) var(--b-space-16) 0;
+      position: sticky;
+      top: 60px;
+      align-self: start;
+      height: calc(100vh - 60px);
+      overflow-y: auto;
+    }
+
+    .ih-docs-nav h4 {
+      font-size: var(--b-font-size-xs);
+      font-weight: var(--b-font-weight-bold);
+      color: var(--b-text-muted);
+      text-transform: uppercase;
+      letter-spacing: var(--b-letter-spacing-wide);
+      margin: var(--b-space-8) 0 var(--b-space-3);
+    }
+
+    .ih-docs-nav h4:first-child {
+      margin-top: 0;
+    }
+
+    .ih-docs-nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .ih-docs-nav li {
+      margin-bottom: var(--b-space-1);
+    }
+
+    .ih-docs-nav a {
+      display: block;
+      padding: var(--b-space-2) var(--b-space-3);
+      border-radius: var(--b-radius-md);
+      font-size: var(--b-font-size-sm);
+      color: var(--b-text-muted);
+      text-decoration: none;
+      transition: all var(--b-transition-fast);
+    }
+
+    .ih-docs-nav a:hover,
+    .ih-docs-nav a.ih-active {
+      color: var(--b-color-primary);
+      background: var(--b-color-primary-subtle);
+    }
+
+    /* ── Content area ────────────────────────────────────────── */
+    .ih-docs-content {
+      padding: var(--b-space-16) var(--b-space-16) var(--b-space-20);
+    }
+
+    .ih-docs-content h1 {
+      font-size: clamp(1.75rem, 3vw, 2.5rem);
+      font-weight: var(--b-font-weight-black);
+      color: var(--b-text-primary);
+      margin-bottom: var(--b-space-6);
+    }
+
+    .ih-docs-content h2 {
+      font-size: var(--b-font-size-2xl);
+      font-weight: var(--b-font-weight-bold);
+      color: var(--b-text-primary);
+      margin: var(--b-space-16) 0 var(--b-space-6);
+      padding-top: var(--b-space-8);
+      border-top: 1px solid var(--b-border-subtle);
+    }
+
+    .ih-docs-content h2:first-of-type {
+      margin-top: var(--b-space-12);
+      border-top: none;
+    }
+
+    .ih-docs-content h3 {
+      font-size: var(--b-font-size-xl);
+      font-weight: var(--b-font-weight-semibold);
+      color: var(--b-color-primary);
+      margin: var(--b-space-10) 0 var(--b-space-4);
+    }
+
+    .ih-docs-content p {
+      color: var(--b-text-muted);
+      font-size: var(--b-font-size-base);
+      line-height: var(--b-line-height-relaxed);
+      margin-bottom: var(--b-space-6);
+    }
+
+    .ih-docs-content ul {
+      list-style: none;
+      margin: 0 0 var(--b-space-6);
+      padding: 0;
+    }
+
+    .ih-docs-content ul li {
+      color: var(--b-text-muted);
+      font-size: var(--b-font-size-base);
+      padding: var(--b-space-2) 0 var(--b-space-2) var(--b-space-6);
+      position: relative;
+      line-height: var(--b-line-height-relaxed);
+    }
+
+    .ih-docs-content ul li::before {
+      content: '→';
+      position: absolute;
+      left: 0;
+      color: var(--b-color-primary);
+      font-weight: var(--b-font-weight-bold);
+    }
+
+    /* ── Code block ──────────────────────────────────────────── */
+    .ih-code-block {
+      background: var(--b-card-bg);
+      border: 1px solid var(--b-card-border);
+      border-radius: var(--b-radius-xl);
+      overflow: hidden;
+      margin: var(--b-space-6) 0;
+    }
+
+    .ih-code-block__header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: var(--b-space-3) var(--b-space-6);
+      border-bottom: 1px solid var(--b-card-border);
+      background: var(--b-card-hover-bg);
+    }
+
+    .ih-code-block__lang {
+      font-size: var(--b-font-size-xs);
+      font-weight: var(--b-font-weight-semibold);
+      color: var(--b-color-primary);
+      text-transform: uppercase;
+      letter-spacing: var(--b-letter-spacing-wide);
+    }
+
+    .ih-code-block pre {
+      margin: 0;
+      padding: var(--b-space-8);
+      overflow-x: auto;
+    }
+
+    .ih-code-block code {
+      font-family: 'Fira Code', 'Cascadia Code', 'Consolas', monospace;
+      font-size: var(--b-font-size-sm);
+      color: var(--b-text-primary);
+      line-height: 1.7;
+      white-space: pre;
+    }
+
+    /* ── Table scroll wrapper ────────────────────────────────── */
+    .ih-table-wrap {
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    /* ── Next steps card row ─────────────────────────────────── */
+    .ih-docs-next {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: var(--b-space-6);
+      margin-top: var(--b-space-8);
+    }
+
+    .ih-docs-next__card {
+      background: var(--b-card-bg);
+      border: 1px solid var(--b-card-border);
+      border-radius: var(--b-radius-xl);
+      padding: var(--b-space-6) var(--b-space-8);
+      text-decoration: none;
+      transition: all var(--b-transition-normal);
+      display: block;
+    }
+
+    .ih-docs-next__card:hover {
+      border-color: var(--b-color-primary);
+      background: var(--b-card-hover-bg);
+      transform: translateY(-4px);
+    }
+
+    .ih-docs-next__card-label {
+      font-size: var(--b-font-size-xs);
+      font-weight: var(--b-font-weight-bold);
+      color: var(--b-color-primary);
+      text-transform: uppercase;
+      letter-spacing: var(--b-letter-spacing-wide);
+      margin-bottom: var(--b-space-2);
+    }
+
+    .ih-docs-next__card-title {
+      font-size: var(--b-font-size-base);
+      font-weight: var(--b-font-weight-semibold);
+      color: var(--b-text-primary);
+    }
+
+    /* ── Concept table ───────────────────────────────────────── */
+    .ih-concept-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: var(--b-space-6) 0;
+    }
+
+    .ih-concept-table th {
+      text-align: left;
+      padding: var(--b-space-3) var(--b-space-5);
+      font-size: var(--b-font-size-sm);
+      font-weight: var(--b-font-weight-semibold);
+      color: var(--b-color-primary);
+      border-bottom: 1px solid var(--b-card-border);
+    }
+
+    .ih-concept-table td {
+      padding: var(--b-space-3) var(--b-space-5);
+      font-size: var(--b-font-size-sm);
+      color: var(--b-text-muted);
+      border-bottom: 1px solid var(--b-border-subtle);
+      line-height: var(--b-line-height-relaxed);
+      vertical-align: top;
+    }
+
+    .ih-concept-table tr:last-child td {
+      border-bottom: none;
+    }
+
+    /* ── Callout note ────────────────────────────────────────── */
+    .ih-docs-note {
+      background: var(--b-color-primary-subtle);
+      border: 1px solid var(--b-border-primary);
+      border-left: 4px solid var(--b-color-primary);
+      border-radius: var(--b-radius-lg);
+      padding: var(--b-space-5) var(--b-space-6);
+      margin: var(--b-space-6) 0;
+    }
+
+    .ih-docs-note p {
+      margin: 0;
+      font-size: var(--b-font-size-sm);
+      color: var(--b-text-primary);
+    }
+
+    /* ── Responsive ──────────────────────────────────────────── */
+    body { overflow-x: hidden; }
+
+    /* Hero — centred on all screen sizes */
+    .b-hero-section .b-container { display: flex; flex-direction: column; align-items: center; text-align: center; }
+    .b-hero-section .b-hero-left { max-width: 780px; width: 100%; }
+    .b-hero-section .b-hero-ctas { justify-content: center; }
+    .b-hero-section .b-hero-subheading { max-width: 640px; margin-left: auto; margin-right: auto; }
+
+    @media (max-width: 1024px) {
+      .ih-docs-layout {
+        grid-template-columns: 1fr;
+      }
+
+      .ih-docs-sidebar {
+        position: static;
+        height: auto;
+        border-right: none;
+        border-bottom: 1px solid var(--b-border-subtle);
+        padding: var(--b-space-8) 0;
+      }
+
+      /* Pill-nav: hide section headings, make links wrap as pills */
+      .ih-docs-nav h4 {
+        display: none !important;
+      }
+      .ih-docs-nav ul {
+        display: flex !important;
+        flex-wrap: wrap !important;
+        gap: var(--b-space-2) !important;
+        margin-bottom: var(--b-space-2) !important;
+      }
+      .ih-docs-nav a {
+        display: inline-block !important;
+        padding: var(--b-space-1) var(--b-space-3) !important;
+        border-radius: var(--b-radius-full) !important;
+        background: var(--b-bg-surface) !important;
+        border: 1px solid var(--b-border-default) !important;
+        font-size: var(--b-font-size-xs) !important;
+        white-space: nowrap !important;
+      }
+      .ih-docs-nav a:hover,
+      .ih-docs-nav a.ih-active {
+        background: var(--b-color-primary-subtle) !important;
+        border-color: var(--b-color-primary) !important;
+        color: var(--b-color-primary) !important;
+      }
+
+      .ih-docs-content {
+        padding: var(--b-space-10) 0 var(--b-space-16);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .ih-docs-layout {
+        padding: 0 var(--b-space-6);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header id="header-container"></header>
+
+  <!-- ════════════════════════════════════════════════════════════
+       HERO
+       ════════════════════════════════════════════════════════════ -->
+  <section class="b-hero-section b-hero-bg">
+    <div class="b-container">
+      <div class="b-hero-left">
+        <h1 class="b-hero-headline">InstallHub Documentation</h1>
+        <p class="b-hero-subheading">Get packages moving in minutes.</p>
+        <div class="b-hero-ctas">
+          <a href="#quickstart" class="b-btn b-btn-primary b-btn-large">Quick Start</a>
+          <a href="https://community.bizfirstai.com" class="b-btn b-btn-secondary b-btn-large" target="_blank" rel="noopener">Ask the Community</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════════════
+       TWO-COLUMN DOCS LAYOUT
+       ════════════════════════════════════════════════════════════ -->
+  <div class="ih-docs-layout" style="padding-top: var(--b-space-8); padding-bottom: var(--b-space-20);">
+
+    <!-- SIDEBAR -->
+    <aside class="ih-docs-sidebar">
+      <nav class="ih-docs-nav">
+
+        <h4>Getting Started</h4>
+        <ul>
+          <li><a href="#quickstart" class="ih-active">Quick Start</a></li>
+          <li><a href="#install">Installation</a></li>
+          <li><a href="#basic-usage">Basic Usage</a></li>
+        </ul>
+
+        <h4>Export Packages</h4>
+        <ul>
+          <li><a href="#export-wizard">Export Wizard</a></li>
+          <li><a href="#export-sources">Source Types</a></li>
+          <li><a href="#export-versioning">Versioning</a></li>
+        </ul>
+
+        <h4>Import Packages</h4>
+        <ul>
+          <li><a href="#import-wizard">Import Wizard</a></li>
+          <li><a href="#import-handlers">Import Handlers</a></li>
+          <li><a href="#import-status">Import Status</a></li>
+        </ul>
+
+        <h4>Conflict Resolution</h4>
+        <ul>
+          <li><a href="#conflict-strategies">Conflict Strategies</a></li>
+          <li><a href="#rollback">Rollback</a></li>
+        </ul>
+
+        <h4>Marketplace</h4>
+        <ul>
+          <li><a href="#publish">Publishing</a></li>
+          <li><a href="#discover">Discovery</a></li>
+        </ul>
+
+        <h4>API Reference</h4>
+        <ul>
+          <li><a href="#api-endpoints">API Endpoints</a></li>
+        </ul>
+
+        <h4>Changelog</h4>
+        <ul>
+          <li><a href="./changelog.html">Release Notes</a></li>
+        </ul>
+
+      </nav>
+    </aside>
+
+    <!-- CONTENT -->
+    <main class="ih-docs-content">
+
+      <!-- Quick Start -->
+      <h1 id="quickstart">Getting Started with InstallHub</h1>
+      <p>InstallHub is the enterprise package management system built into the BizFirstAi platform. It lets you export data from any source into versioned packages, import those packages into any target system with automatic conflict resolution, and publish packages to a governed marketplace for your organisation.</p>
+
+      <div class="ih-docs-note">
+        <p><strong>Platform requirement:</strong> InstallHub is part of BizFirstAi. You will need a BizFirstAi account to use the SDK and hosted runtime. <a href="https://bizfirstai.com/website/contact.html" >Sign up free here.</a></p>
+      </div>
+
+      <h2 id="install">Installation</h2>
+      <p>Add the InstallHub NuGet package to your .NET project:</p>
+
+      <div class="ih-code-block">
+        <div class="ih-code-block__header">
+          <span class="ih-code-block__lang">Shell</span>
+        </div>
+        <pre><code>dotnet add package BizFirstAi.InstallHub</code></pre>
+      </div>
+
+      <h2 id="basic-usage">Basic Usage</h2>
+      <p>The following example creates an InstallHub client, defines an export package, and publishes the first version.</p>
+
+      <div class="ih-code-block">
+        <div class="ih-code-block__header">
+          <span class="ih-code-block__lang">C#</span>
+        </div>
+        <pre><code>using BizFirstAi.InstallHub;
+using BizFirstAi.InstallHub.Export;
+
+// 1. Create the InstallHub client
+var client = new InstallHubClient(new InstallHubOptions
+{
+    ApiKey    = Environment.GetEnvironmentVariable("BIZFIRSTAI_API_KEY"),
+    Workspace = "my-workspace"
+});
+
+// 2. Create an export package
+var package = await client.Packages.CreateAsync(new CreateExportPackageRequest
+{
+    Name        = "customer-config",
+    Description = "Customer configuration and onboarding data",
+    SourceType  = ExportSourceType.Database,
+    TenantId    = "tenant-001"
+});
+
+// 3. Configure the export items
+await client.Packages.AddItemAsync(package.Id, new ExportPackageItemRequest
+{
+    EntityName  = "CustomerSettings",
+    FieldMap    = new[] { "Id", "Name", "Config", "CreatedAt" },
+    IncludeAll  = false
+});
+
+// 4. Publish version 1.0.0
+var version = await client.Packages.PublishVersionAsync(package.Id, new PublishVersionRequest
+{
+    Version      = "1.0.0",
+    ReleaseNotes = "Initial release of customer configuration package."
+});
+
+Console.WriteLine($"Package published: {version.PackageId} v{version.Version}");
+Console.WriteLine($"Download URL expires: {version.SignedUrlExpiresAt}");</code></pre>
+      </div>
+
+      <h2 id="export-wizard">Export Packages</h2>
+
+      <h3>Export Wizard (4 Steps)</h3>
+      <p>The Creator App guides operators through four steps to create an export package:</p>
+
+      <ul>
+        <li><strong>Step 1 — Source Selection:</strong> Choose the source type (Database, File, or API) and provide connection details.</li>
+        <li><strong>Step 2 — Field Mapping:</strong> Select entities and map fields to include in the package. Unmapped fields are excluded from the ZIP archive.</li>
+        <li><strong>Step 3 — Schedule:</strong> Configure a one-time or recurring export schedule. Recurring exports produce new versions automatically.</li>
+        <li><strong>Step 4 — Review &amp; Submit:</strong> Review the full configuration before the export runs. The manifest and field map are displayed for confirmation.</li>
+      </ul>
+
+      <h3 id="export-sources">Source Types</h3>
+      <p>InstallHub supports three source types for export:</p>
+
+      <ul>
+        <li><strong>Database:</strong> Relational database tables via a connection string. Supports filtering, pagination, and relationship traversal.</li>
+        <li><strong>File:</strong> CSV, JSON, and XML file sources. Files are read, validated, and packaged with schema inference.</li>
+        <li><strong>API:</strong> Any HTTP REST API endpoint. Supports authentication headers, pagination, and response field extraction.</li>
+      </ul>
+
+      <h3 id="export-versioning">Semantic Versioning</h3>
+      <p>Every package in InstallHub is versioned using semantic versioning. Versions move through a defined lifecycle:</p>
+
+      <ul>
+        <li><strong>Draft:</strong> Under construction. Not visible to importers. Changes are freely allowed.</li>
+        <li><strong>Released:</strong> Published and available for import or marketplace publishing. No further edits to the version content.</li>
+        <li><strong>Archived:</strong> Retired. Preserved for audit and rollback but hidden from active discovery.</li>
+      </ul>
+
+      <h2 id="import-wizard">Import Packages</h2>
+
+      <h3>Import Wizard (4 Steps)</h3>
+      <p>The import wizard walks operators through validation, mapping, and conflict resolution before any data is modified:</p>
+
+      <ul>
+        <li><strong>Step 1 — File Upload:</strong> Upload the package ZIP. ZipValidationService runs manifest validation, SHA256 checksum verification, and structure validation immediately.</li>
+        <li><strong>Step 2 — Mapping:</strong> Review and adjust the field mapping between the package schema and the target system's schema. Override mappings as needed.</li>
+        <li><strong>Step 3 — Conflict Resolution:</strong> Choose a conflict strategy for each entity type. Review detected conflicts before import begins.</li>
+        <li><strong>Step 4 — Review &amp; Start:</strong> Review the full import plan — dependency order, conflict strategy, estimated records. Confirm to begin.</li>
+      </ul>
+
+      <h3 id="import-handlers">Import Handlers</h3>
+      <p>InstallHub ships 20 specialized import handlers, each responsible for a specific entity type. Handlers are selected automatically based on the package manifest:</p>
+
+      <ul>
+        <li>FormHandler, TableHandler, ConfigHandler, TemplateHandler, ScriptHandler</li>
+        <li>DataHandler, ViewHandler, StoredProcHandler, TriggerHandler, IndexHandler</li>
+        <li>ConstraintHandler, RoleHandler, UserHandler, SecurityHandler, AuditHandler</li>
+        <li>MetadataHandler, SchemaHandler, RelationshipHandler, CustomHandler, BaseImportHandler</li>
+      </ul>
+
+      <h3 id="import-status">Import Status States</h3>
+      <p>Every import moves through the following states:</p>
+
+      <ul>
+        <li><strong>Pending:</strong> Import queued, awaiting resource availability.</li>
+        <li><strong>Validating:</strong> ZipValidationService and DependencyResolutionService running.</li>
+        <li><strong>Configuring:</strong> Conflict strategies applied, import plan being built.</li>
+        <li><strong>Reviewing:</strong> Awaiting operator confirmation in the wizard.</li>
+        <li><strong>Importing:</strong> Handlers running, data being written.</li>
+        <li><strong>Completed:</strong> All handlers completed successfully.</li>
+        <li><strong>Failed:</strong> One or more handlers encountered an unrecoverable error.</li>
+        <li><strong>RolledBack:</strong> Import failed and BackupRestoreService has restored the pre-import snapshot.</li>
+      </ul>
+
+      <h2 id="conflict-strategies">Conflict Resolution</h2>
+      <p>When an imported record conflicts with an existing record in the target system, InstallHub applies one of three strategies. The strategy can be set globally or per entity type.</p>
+
+      <div class="ih-table-wrap">
+      <table class="ih-concept-table">
+        <thead>
+          <tr>
+            <th>Strategy</th>
+            <th>Behaviour</th>
+            <th>Best for</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Merge</strong></td>
+            <td>Recursive intelligent merge of the incoming record into the existing record. Fields present in the incoming record overwrite the corresponding existing field. Fields absent in the incoming record are preserved as-is.</td>
+            <td>Partial updates where existing data should be preserved for fields not included in the package.</td>
+          </tr>
+          <tr>
+            <td><strong>Overwrite</strong></td>
+            <td>The existing record is replaced entirely by the incoming record. No fields from the existing record are retained.</td>
+            <td>Full replacements where the package is the authoritative source of truth for the entity.</td>
+          </tr>
+          <tr>
+            <td><strong>Skip</strong></td>
+            <td>The existing record is kept unchanged. The incoming record is discarded. No error is raised — the conflict is logged and processing continues.</td>
+            <td>Additive imports where you only want to create new records, never modify existing ones.</td>
+          </tr>
+        </tbody>
+      </table>
+      </div>
+
+      <h3 id="rollback">Rollback</h3>
+      <p>BackupRestoreService creates a pre-import database snapshot automatically before every import. If the import fails, InstallHub rolls back to the snapshot atomically — the system is restored to its exact pre-import state with no manual steps.</p>
+
+      <ul>
+        <li>Backups are GZip-compressed (3–5x reduction in storage size).</li>
+        <li>Every backup carries a SHA256 integrity hash — restoration refuses if the hash does not match.</li>
+        <li>Retention is configurable from 7 to 730 days per tenant.</li>
+      </ul>
+
+      <h2 id="publish">Marketplace — Publishing</h2>
+      <p>Published packages are submitted from the Creator App and go through an admin approval workflow before appearing in the marketplace:</p>
+
+      <ul>
+        <li>Select a Released version from the package management screen and click <strong>Publish to Marketplace</strong>.</li>
+        <li>An admin receives a review notification in the Admin App.</li>
+        <li>The admin approves or rejects the submission with optional feedback.</li>
+        <li>Approved packages appear immediately in the marketplace discovery feed.</li>
+      </ul>
+
+      <h2 id="discover">Marketplace — Discovery</h2>
+      <p>The Marketplace App provides full-text search and filter capabilities for discovering packages:</p>
+
+      <ul>
+        <li>Search by title, description, or tag.</li>
+        <li>Filter by category, publisher, or minimum star rating.</li>
+        <li>Sort by popularity (download count), rating, or recency.</li>
+        <li>Trending packages are surfaced automatically by download count.</li>
+        <li>Downloads are served via signed Cloudflare R2 URLs that expire after 60 minutes.</li>
+      </ul>
+
+      <h2 id="api-endpoints">API Reference</h2>
+      <p>InstallHub exposes 50+ API endpoints across three applications. Core endpoint groups:</p>
+
+      <ul>
+        <li><strong>Export API:</strong> Create packages, manage versions, trigger exports, retrieve assets.</li>
+        <li><strong>Import API:</strong> Upload packages, start imports, monitor status, trigger rollbacks.</li>
+        <li><strong>Marketplace API:</strong> Submit packages for approval, search and filter, download, rate and review.</li>
+      </ul>
+
+      <div class="ih-docs-note">
+        <p><strong>OpenAPI spec:</strong> The full OpenAPI specification is available in your BizFirstAi workspace under <strong>Settings &rarr; API &rarr; InstallHub</strong>. Authentication uses your workspace API key via the <code>Authorization: Bearer</code> header.</p>
+      </div>
+
+      <h2>Next Steps</h2>
+      <p>Ready to go further? Explore these resources:</p>
+
+      <div class="ih-docs-next">
+        <a href="./features.html" class="ih-docs-next__card">
+          <div class="ih-docs-next__card-label">Reference</div>
+          <div class="ih-docs-next__card-title">All Features</div>
+        </a>
+        <a href="./changelog.html" class="ih-docs-next__card">
+          <div class="ih-docs-next__card-label">History</div>
+          <div class="ih-docs-next__card-title">Changelog</div>
+        </a>
+        <a href="https://community.bizfirstai.com" class="ih-docs-next__card" target="_blank" rel="noopener">
+          <div class="ih-docs-next__card-label">Community</div>
+          <div class="ih-docs-next__card-title">Ask &amp; Discuss</div>
+        </a>
+        <a href="https://bizfirstai.com/website/contact.html" class="ih-docs-next__card">
+          <div class="ih-docs-next__card-label">Enterprise</div>
+          <div class="ih-docs-next__card-title">Talk to Sales</div>
+        </a>
+      </div>
+
+    </main>
+
+  </div>
+
+  <footer id="footer-container"></footer>
+
+  <script src="./shared-layout.js"></script>
+</body>
+</html>

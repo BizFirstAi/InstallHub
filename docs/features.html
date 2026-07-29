@@ -1,0 +1,823 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/png" href="https://bizfirstai.com/website/assets/Logo/logo-m.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="InstallHub Features — full capability breakdown of the enterprise package management system by BizFirstAi. Export, import, rollback, marketplace, dependency resolution, and more.">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Features — InstallHub by BizFirstAi">
+  <meta property="og:description" content="Every capability of the InstallHub enterprise package management system: export wizard, 20 import handlers, conflict resolution, marketplace, dependency resolution, and security.">
+  <meta property="og:type" content="website">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Features — InstallHub by BizFirstAi">
+  <meta name="twitter:description" content="Complete feature breakdown of the InstallHub enterprise package management system.">
+
+  <title>Features — InstallHub by BizFirstAi</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://bizfirstai.com/website/assets/css/b-index.css">
+
+  <style>
+    body { overflow-x: hidden; }
+
+    /* Hero — left + right stack on mobile */
+    .b-hero-section .b-container { display: flex; align-items: center; flex-wrap: wrap; gap: var(--b-space-12, 3rem); }
+    .b-hero-section .b-hero-left { flex: 1; min-width: 280px; }
+    .b-hero-section .b-hero-right { flex: 1; min-width: 280px; }
+    @media (max-width: 768px) {
+      .b-hero-section .b-container { flex-direction: column; text-align: center; }
+      .b-hero-section .b-hero-ctas { justify-content: center; }
+      .b-hero-section .b-hero-subheading { max-width: 100%; }
+    }
+
+    /* Benefits grid — 3 col desktop, 2 col tablet, 1 col mobile */
+    .b-benefits-grid { grid-template-columns: repeat(3, 1fr); }
+    @media (max-width: 900px) { .b-benefits-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 600px) { .b-benefits-grid { grid-template-columns: 1fr; } }
+
+    /* Prevent cards from overflowing on narrow viewports */
+    .b-benefit-card { overflow: hidden; word-break: break-word; min-width: 0; }
+
+    /* Icon + heading inline alignment */
+    .b-benefit-card h3 { display: flex; align-items: center; gap: 0.625rem; flex-wrap: wrap; }
+    .b-icon { display: inline-flex; align-items: center; justify-content: center; flex-shrink: 0; width: 1.75rem; height: 1.75rem; }
+    .b-icon svg { width: 1.25rem; height: 1.25rem; }
+  </style>
+</head>
+<body>
+
+  <header id="header-container"></header>
+
+  <!-- ════════════════════════════════════════════════════════════
+       HERO
+       ════════════════════════════════════════════════════════════ -->
+  <section class="b-hero-section" style="min-height:52vh;">
+    <div class="b-container">
+      <div class="b-hero-left">
+        <h1 class="b-hero-headline">Every capability of enterprise package management.</h1>
+        <p class="b-hero-subheading">InstallHub combines governed export, intelligent import, and a built-in marketplace — every package operation versioned, checksummed, and fully auditable.</p>
+      </div>
+
+      <div class="b-hero-right">
+        <svg viewBox="0 0 440 345" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:480px;display:block;margin:0 auto;" aria-label="InstallHub 3-phase lifecycle diagram">
+          <defs>
+            <marker id="arrowhead" markerWidth="8" markerHeight="6" refX="6" refY="3" orient="auto">
+              <polygon points="0 0, 8 3, 0 6" fill="#16A34A"/>
+            </marker>
+          </defs>
+
+          <!-- ── Row 1: Export → Versioning → Storage ── -->
+
+          <!-- Box 1: Export (x=8, w=128, cx=72) -->
+          <rect x="8" y="25" width="128" height="88" rx="10" fill="#0D2010" stroke="#22C55E" stroke-width="1.5"/>
+          <text x="72" y="50" text-anchor="middle" font-family="Inter,sans-serif" font-size="11" font-weight="700" fill="#22C55E">PHASE 1</text>
+          <text x="72" y="68" text-anchor="middle" font-family="Inter,sans-serif" font-size="14" font-weight="600" fill="#ffffff">Export</text>
+          <text x="72" y="84" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" fill="#86EFAC">Source → ZIP package</text>
+          <text x="72" y="105" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" fill="#86EFAC">SHA256 checksummed</text>
+
+          <!-- Arrow 1→2 -->
+          <path d="M136 69 L152 69" stroke="#16A34A" stroke-width="1.8" stroke-linecap="round" marker-end="url(#arrowhead)"/>
+
+          <!-- Box 2: Versioning (x=152, w=128, cx=216) -->
+          <rect x="152" y="25" width="128" height="88" rx="10" fill="#0D2010" stroke="#22C55E" stroke-width="1.5"/>
+          <text x="216" y="50" text-anchor="middle" font-family="Inter,sans-serif" font-size="11" font-weight="700" fill="#22C55E">VERSIONING</text>
+          <text x="216" y="68" text-anchor="middle" font-family="Inter,sans-serif" font-size="14" font-weight="600" fill="#ffffff">v1.0 → v2.0</text>
+          <text x="216" y="84" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" fill="#86EFAC">Draft · Released</text>
+          <text x="216" y="105" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" fill="#86EFAC">· Archived</text>
+
+          <!-- Arrow 2→3 -->
+          <path d="M280 69 L296 69" stroke="#16A34A" stroke-width="1.8" stroke-linecap="round" marker-end="url(#arrowhead)"/>
+
+          <!-- Box 3: Storage (x=296, w=128, cx=360) -->
+          <rect x="296" y="25" width="136" height="88" rx="10" fill="#0D2010" stroke="#22C55E" stroke-width="1.5"/>
+          <text x="364" y="50" text-anchor="middle" font-family="Inter,sans-serif" font-size="11" font-weight="700" fill="#22C55E">STORAGE</text>
+          <text x="364" y="68" text-anchor="middle" font-family="Inter,sans-serif" font-size="14" font-weight="600" fill="#ffffff">R2 + SHA256</text>
+          <text x="364" y="84" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" fill="#86EFAC">Checksummed</text>
+          <text x="364" y="105" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" fill="#86EFAC">Signed URL (60 min)</text>
+
+          <!-- ── Down arrows ── -->
+          <path d="M72 113 L72 158" stroke="#16A34A" stroke-width="1.8" stroke-linecap="round" marker-end="url(#arrowhead)"/>
+          <path d="M364 113 L364 158" stroke="#16A34A" stroke-width="1.8" stroke-linecap="round" marker-end="url(#arrowhead)"/>
+
+          <!-- ── Row 2: Import → Marketplace ── -->
+
+          <!-- Box 4: Import (x=8, w=128, cx=72) -->
+          <rect x="8" y="158" width="128" height="88" rx="10" fill="#0D2010" stroke="#4ADE80" stroke-width="1.5"/>
+          <text x="72" y="183" text-anchor="middle" font-family="Inter,sans-serif" font-size="11" font-weight="700" fill="#4ADE80">PHASE 2</text>
+          <text x="72" y="201" text-anchor="middle" font-family="Inter,sans-serif" font-size="14" font-weight="600" fill="#ffffff">Import</text>
+          <text x="72" y="217" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" fill="#86EFAC">20 handlers</text>
+          <text x="72" y="236" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" fill="#86EFAC">Conflict resolve</text>
+
+          <!-- Arrow Import → Marketplace -->
+          <path d="M136 202 L296 202" stroke="#16A34A" stroke-width="1.8" stroke-dasharray="5 4" stroke-linecap="round" marker-end="url(#arrowhead)"/>
+
+          <!-- Box 5: Marketplace (x=296, w=136, cx=364) -->
+          <rect x="296" y="158" width="136" height="88" rx="10" fill="#0D2010" stroke="#4ADE80" stroke-width="1.5"/>
+          <text x="364" y="183" text-anchor="middle" font-family="Inter,sans-serif" font-size="11" font-weight="700" fill="#4ADE80">PHASE 3</text>
+          <text x="364" y="201" text-anchor="middle" font-family="Inter,sans-serif" font-size="14" font-weight="600" fill="#ffffff">Marketplace</text>
+          <text x="364" y="217" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" fill="#86EFAC">Discover · Publish</text>
+          <text x="364" y="236" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" fill="#86EFAC">· Reuse</text>
+
+          <!-- ── Down dashes to Audit ── -->
+          <path d="M72 246 L72 272" stroke="#16A34A" stroke-width="1.4" stroke-dasharray="3 3" stroke-linecap="round"/>
+          <path d="M364 246 L364 272" stroke="#16A34A" stroke-width="1.4" stroke-dasharray="3 3" stroke-linecap="round"/>
+
+          <!-- ── Audit Trail bar ── -->
+          <rect x="8" y="272" width="424" height="58" rx="10" fill="#071A0A" stroke="#16A34A" stroke-width="1.2"/>
+          <text x="220" y="293" text-anchor="middle" font-family="Inter,sans-serif" font-size="11" font-weight="700" fill="#22C55E">AUDIT TRAIL</text>
+          <text x="220" y="310" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" fill="#86EFAC">Every export · version state · import operation</text>
+          <text x="220" y="323" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" fill="#86EFAC">· conflict decision — immutably logged</text>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════════════
+       SECTION 1 — EXPORT SYSTEM
+       ════════════════════════════════════════════════════════════ -->
+  <section class="b-section b-section--alt">
+    <div class="b-container">
+      <h2 class="b-section-title">Export System — Phase 1 — 100% Complete</h2>
+      <p class="b-section-subtitle">A production-ready export pipeline. Extract data from any source into versioned, dependency-tracked ZIP packages with a guided 4-step wizard.</p>
+
+      <div class="b-benefits-grid" style="margin-top:var(--b-space-16);">
+
+        <div class="b-benefit-card">
+          <h3>
+            <span class="b-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                <line x1="9" y1="9" x2="15" y2="9"></line>
+                <line x1="9" y1="12" x2="15" y2="12"></line>
+                <line x1="9" y1="15" x2="13" y2="15"></line>
+              </svg>
+            </span>
+            4-Step Export Wizard
+          </h3>
+          <p>Guided workflow: Source Selection, Field Mapping, Schedule, Review &amp; Submit. Every step validated before proceeding — no misconfigured exports.</p>
+        </div>
+
+        <div class="b-benefit-card">
+          <h3>
+            <span class="b-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+                <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path>
+                <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
+              </svg>
+            </span>
+            Source Types: Database, File, API
+          </h3>
+          <p>Connect to relational databases, file-based data, or any HTTP API. Multi-source exports combine data from different origins into a single versioned package.</p>
+        </div>
+
+        <div class="b-benefit-card">
+          <h3>
+            <span class="b-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="12 6 12 12 16 14"></polyline>
+              </svg>
+            </span>
+            Semantic Versioning
+          </h3>
+          <p>All packages follow semver with a full lifecycle: Draft, Released, Archived. Each version carries independent release notes, assets, and checksums.</p>
+        </div>
+
+        <div class="b-benefit-card">
+          <h3>
+            <span class="b-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"></path>
+              </svg>
+            </span>
+            Cloudflare R2 Storage with SHA256
+          </h3>
+          <p>All packages are stored as versioned ZIP archives in Cloudflare R2. SHA256 checksums are computed and stored on every asset — tamper detection built in.</p>
+        </div>
+
+        <div class="b-benefit-card">
+          <h3>
+            <span class="b-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                <polyline points="14 2 14 8 20 8"></polyline>
+                <line x1="16" y1="13" x2="8" y2="13"></line>
+                <line x1="16" y1="17" x2="8" y2="17"></line>
+              </svg>
+            </span>
+            Complete Audit Trail
+          </h3>
+          <p>Every export operation, version state change, and field mapping decision is written to an immutable audit log. Full compliance evidence without any manual effort.</p>
+        </div>
+
+        <div class="b-benefit-card">
+          <h3>
+            <span class="b-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+              </svg>
+            </span>
+            84+ Tests, 86% Coverage
+          </h3>
+          <p>15,000+ lines of code backed by 84+ automated tests at 86% coverage. SOLID Principles Score 9.2/10. Architecture Score 9.5/10.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════════════
+       SECTION 2 — IMPORT SYSTEM
+       ════════════════════════════════════════════════════════════ -->
+  <section class="b-section b-section--default">
+    <div class="b-container">
+      <h2 class="b-section-title">Import System — Phase 2 — 95% Complete</h2>
+      <p class="b-section-subtitle">Upload any InstallHub package and let the system validate, resolve dependencies, handle conflicts, and import — all within a guided 4-step wizard.</p>
+
+      <div class="b-benefits-grid" style="margin-top:var(--b-space-16);">
+
+        <div class="b-benefit-card">
+          <h3>
+            <span class="b-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                <line x1="9" y1="9" x2="15" y2="9"></line>
+                <line x1="9" y1="12" x2="15" y2="12"></line>
+                <line x1="9" y1="15" x2="13" y2="15"></line>
+              </svg>
+            </span>
+            4-Step Import Wizard
+          </h3>
+          <p>Guided workflow: File Upload, Mapping, Conflict Resolution, Review &amp; Start. The wizard surfaces every decision point clearly before any data is modified.</p>
+        </div>
+
+        <div class="b-benefit-card">
+          <h3>
+            <span class="b-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+              </svg>
+            </span>
+            ZipValidationService
+          </h3>
+          <p>Every uploaded package is validated: manifest structure, SHA256 checksum verification, and archive integrity checks — before a single import handler runs.</p>
+        </div>
+
+        <div class="b-benefit-card">
+          <h3>
+            <span class="b-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="5" r="3"></circle>
+                <circle cx="5" cy="19" r="3"></circle>
+                <circle cx="19" cy="19" r="3"></circle>
+                <line x1="12" y1="8" x2="5" y2="16"></line>
+                <line x1="12" y1="8" x2="19" y2="16"></line>
+              </svg>
+            </span>
+            20 Specialized Import Handlers
+          </h3>
+          <p>FormHandler, TableHandler, ConfigHandler, TemplateHandler, ScriptHandler, DataHandler, ViewHandler, StoredProcHandler, TriggerHandler, IndexHandler, ConstraintHandler, RoleHandler, UserHandler, SecurityHandler, AuditHandler, MetadataHandler, SchemaHandler, RelationshipHandler, CustomHandler, and BaseImportHandler.</p>
+        </div>
+
+        <div class="b-benefit-card">
+          <h3>
+            <span class="b-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="8" y1="6" x2="21" y2="6"></line>
+                <line x1="8" y1="12" x2="21" y2="12"></line>
+                <line x1="8" y1="18" x2="21" y2="18"></line>
+                <line x1="3" y1="6" x2="3.01" y2="6"></line>
+                <line x1="3" y1="12" x2="3.01" y2="12"></line>
+                <line x1="3" y1="18" x2="3.01" y2="18"></line>
+              </svg>
+            </span>
+            3 Conflict Strategies
+          </h3>
+          <p>Merge (recursive intelligent merge), Overwrite (replace all existing records), Skip (keep existing, ignore incoming). Choose per-entity or apply globally across the import.</p>
+        </div>
+
+        <div class="b-benefit-card">
+          <h3>
+            <span class="b-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+              </svg>
+            </span>
+            DependencyResolutionService
+          </h3>
+          <p>Topological sort determines the correct import order. Circular dependency detection at 99.9% accuracy. Missing dependency detection before the import starts — zero surprises mid-run.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════════════
+       SECTION 3 — ROLLBACK AND RECOVERY
+       ════════════════════════════════════════════════════════════ -->
+  <section class="b-section b-section--alt">
+    <div class="b-container">
+      <h2 class="b-section-title">Rollback &amp; Recovery</h2>
+      <p class="b-section-subtitle">BackupRestoreService creates pre-import database snapshots automatically. If anything goes wrong, a single command rolls back to the exact pre-import state.</p>
+
+      <div class="b-benefits-grid" style="margin-top:var(--b-space-16);">
+
+        <div class="b-benefit-card">
+          <h3>
+            <span class="b-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"></path>
+                <path d="M3 3v5h5"></path>
+              </svg>
+            </span>
+            Pre-Import Snapshots
+          </h3>
+          <p>BackupRestoreService takes a full database snapshot before every import begins. No manual steps — protection is automatic and always current.</p>
+        </div>
+
+        <div class="b-benefit-card">
+          <h3>
+            <span class="b-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+              </svg>
+            </span>
+            GZip Compression (3–5x Reduction)
+          </h3>
+          <p>All backups are GZip-compressed. Typical snapshots are 3 to 5 times smaller than raw data — lower storage cost, faster transfers, same reliability.</p>
+        </div>
+
+        <div class="b-benefit-card">
+          <h3>
+            <span class="b-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+              </svg>
+            </span>
+            SHA256 Integrity Verification
+          </h3>
+          <p>Every backup is fingerprinted with a SHA256 hash. Restoration refuses to proceed if the integrity check fails — corrupted backups are caught before they cause harm.</p>
+        </div>
+
+        <div class="b-benefit-card">
+          <h3>
+            <span class="b-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                <line x1="16" y1="2" x2="16" y2="6"></line>
+                <line x1="8" y1="2" x2="8" y2="6"></line>
+                <line x1="3" y1="10" x2="21" y2="10"></line>
+              </svg>
+            </span>
+            Configurable Retention: 7–730 Days
+          </h3>
+          <p>Set backup retention policies per-tenant. Retain as few as 7 days for low-risk imports or up to 730 days for regulated environments requiring long audit windows.</p>
+        </div>
+
+        <div class="b-benefit-card">
+          <h3>
+            <span class="b-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+              </svg>
+            </span>
+            Atomic Backup &amp; Restore
+          </h3>
+          <p>Both backup and restore operations are atomic — they either complete fully or leave the system unchanged. Partial restores are impossible by design.</p>
+        </div>
+
+        <div class="b-benefit-card">
+          <h3>
+            <span class="b-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="12 6 12 12 16 14"></polyline>
+              </svg>
+            </span>
+            Full Import Status Tracking
+          </h3>
+          <p>Every import moves through documented states: Pending, Validating, Configuring, Reviewing, Importing, Completed, Failed, or RolledBack — each state change timestamped and logged.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════════════
+       SECTION 4 — MARKETPLACE
+       ════════════════════════════════════════════════════════════ -->
+  <section class="b-section b-section--default">
+    <div class="b-container">
+      <h2 class="b-section-title">Marketplace — Phase 3 — 60% Complete</h2>
+      <p class="b-section-subtitle">A governed marketplace for publishing, discovering, and downloading reusable packages across teams and organisations — with admin oversight at every step.</p>
+
+      <div class="b-benefits-grid" style="margin-top:var(--b-space-16);">
+
+        <div class="b-benefit-card">
+          <h3>
+            <span class="b-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="9" cy="21" r="1"></circle>
+                <circle cx="20" cy="21" r="1"></circle>
+                <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+              </svg>
+            </span>
+            One-Click Publish with Admin Approval
+          </h3>
+          <p>Creators publish packages from the Creator App. Admins review and approve via the Admin App before any package becomes publicly available in the marketplace.</p>
+        </div>
+
+        <div class="b-benefit-card">
+          <h3>
+            <span class="b-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+              </svg>
+            </span>
+            Full-Text Search &amp; Filters
+          </h3>
+          <p>Search across package titles, descriptions, and tags. Filter by category, publisher, or rating. Sort by popularity, rating, or recency — find exactly what your team needs.</p>
+        </div>
+
+        <div class="b-benefit-card">
+          <h3>
+            <span class="b-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                <polyline points="7 10 12 15 17 10"></polyline>
+                <line x1="12" y1="15" x2="12" y2="3"></line>
+              </svg>
+            </span>
+            Signed Download URLs (60-Minute Expiry)
+          </h3>
+          <p>Downloads are served via time-limited signed URLs generated from Cloudflare R2. URLs expire after 60 minutes — no persistent public links, no unauthorised redistribution.</p>
+        </div>
+
+        <div class="b-benefit-card">
+          <h3>
+            <span class="b-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="18" y1="20" x2="18" y2="10"></line>
+                <line x1="12" y1="20" x2="12" y2="4"></line>
+                <line x1="6" y1="20" x2="6" y2="14"></line>
+              </svg>
+            </span>
+            Download Tracking &amp; Trending
+          </h3>
+          <p>Every download is logged to MarketplaceDownloadLog. Trending packages surface by download count. Publishers see analytics on their package performance over time.</p>
+        </div>
+
+        <div class="b-benefit-card">
+          <h3>
+            <span class="b-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+              </svg>
+            </span>
+            5-Star Ratings &amp; Reviews
+          </h3>
+          <p>Users rate and review packages. Written reviews go through moderation before publishing. Verified purchase badge distinguishes reviews from actual users.</p>
+        </div>
+
+        <div class="b-benefit-card">
+          <h3>
+            <span class="b-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path>
+                <line x1="7" y1="7" x2="7.01" y2="7"></line>
+              </svg>
+            </span>
+            Publisher Reputation Badges
+          </h3>
+          <p>Publisher profiles display earned badges: Verified, Top Rated, Trending. Download stats and earnings tracking give creators visibility into their marketplace impact.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════════════
+       SECTION 5 — DEPENDENCY RESOLUTION
+       ════════════════════════════════════════════════════════════ -->
+  <section class="b-section b-section--alt">
+    <div class="b-container">
+      <h2 class="b-section-title">Dependency Resolution</h2>
+      <p class="b-section-subtitle">InstallHub automatically analyses every package's dependency graph before import begins — resolving order, detecting cycles, and identifying gaps before touching your data.</p>
+
+      <div class="b-benefits-grid" style="margin-top:var(--b-space-16);">
+
+        <div class="b-benefit-card">
+          <h3>
+            <span class="b-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="5" r="3"></circle>
+                <circle cx="5" cy="19" r="3"></circle>
+                <circle cx="19" cy="19" r="3"></circle>
+                <line x1="12" y1="8" x2="5" y2="16"></line>
+                <line x1="12" y1="8" x2="19" y2="16"></line>
+              </svg>
+            </span>
+            Automatic Dependency Graph Construction
+          </h3>
+          <p>DependencyResolutionService builds a complete dependency graph from all package items — automatically, with no configuration required from the operator.</p>
+        </div>
+
+        <div class="b-benefit-card">
+          <h3>
+            <span class="b-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+              </svg>
+            </span>
+            Topological Sort for Correct Import Order
+          </h3>
+          <p>Topological sorting determines the exact sequence in which items must be imported. Dependents always arrive after the entities they depend on — no foreign key violations.</p>
+        </div>
+
+        <div class="b-benefit-card">
+          <h3>
+            <span class="b-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M1 4v6h6"></path>
+                <path d="M23 20v-6h-6"></path>
+                <path d="M20.49 9A9 9 0 0 0 5.64 5.64L1 10m22 4-4.64 4.36A9 9 0 0 1 3.51 15"></path>
+              </svg>
+            </span>
+            Circular Dependency Detection (99.9% Accuracy)
+          </h3>
+          <p>Cycle detection runs before import starts. Circular dependencies are flagged with a clear explanation of the cycle — operators can fix the package before any import attempt.</p>
+        </div>
+
+        <div class="b-benefit-card">
+          <h3>
+            <span class="b-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path>
+                <line x1="12" y1="9" x2="12" y2="13"></line>
+                <line x1="12" y1="17" x2="12.01" y2="17"></line>
+              </svg>
+            </span>
+            Missing Dependency Detection
+          </h3>
+          <p>If a package references an entity that does not exist in the target system, InstallHub surfaces the gap before import starts — not mid-run when data is already partially modified.</p>
+        </div>
+
+        <div class="b-benefit-card">
+          <h3>
+            <span class="b-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                <line x1="9" y1="9" x2="15" y2="9"></line>
+                <line x1="9" y1="12" x2="15" y2="12"></line>
+                <line x1="9" y1="15" x2="13" y2="15"></line>
+              </svg>
+            </span>
+            Full Dependency Graph Visualisation
+          </h3>
+          <p>The dependency graph is rendered in the import wizard — showing every entity, its dependencies, and the resolved import order — before the operator confirms the run.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════════════
+       SECTION 6 — VERSION MANAGEMENT
+       ════════════════════════════════════════════════════════════ -->
+  <section class="b-section b-section--default">
+    <div class="b-container">
+      <h2 class="b-section-title">Version Management</h2>
+      <p class="b-section-subtitle">Every package in InstallHub is fully versioned from creation to archive. Nothing is overwritten — every state is preserved.</p>
+
+      <div class="b-benefits-grid" style="margin-top:var(--b-space-16);">
+
+        <div class="b-benefit-card">
+          <h3>
+            <span class="b-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+              </svg>
+            </span>
+            Semantic Versioning on Every Package
+          </h3>
+          <p>All packages follow semantic versioning. Version numbers are enforced — no accidental overwriting of a released version with a draft.</p>
+        </div>
+
+        <div class="b-benefit-card">
+          <h3>
+            <span class="b-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="12 6 12 12 16 14"></polyline>
+              </svg>
+            </span>
+            Full Version History
+          </h3>
+          <p>Every version of every package is retained. Teams can browse, compare, or re-import any prior version without any special recovery procedure.</p>
+        </div>
+
+        <div class="b-benefit-card">
+          <h3>
+            <span class="b-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                <polyline points="14 2 14 8 20 8"></polyline>
+              </svg>
+            </span>
+            Release Notes per Version
+          </h3>
+          <p>Each version carries its own release notes. Consumers understand exactly what changed before deciding to import a new version.</p>
+        </div>
+
+        <div class="b-benefit-card">
+          <h3>
+            <span class="b-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+              </svg>
+            </span>
+            Draft, Released, Archived Lifecycle
+          </h3>
+          <p>Packages progress through a defined lifecycle. Draft versions are invisible to importers until Released. Archived versions are preserved for audit but hidden from active discovery.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════════════
+       SECTION 7 — SECURITY AND TENANCY
+       ════════════════════════════════════════════════════════════ -->
+  <section class="b-section b-section--alt">
+    <div class="b-container">
+      <h2 class="b-section-title">Security &amp; Tenancy</h2>
+      <p class="b-section-subtitle">Multi-tenant isolation is enforced at the database layer — no configuration required. Every operation carries tenant context and is logged for compliance.</p>
+
+      <div class="b-benefits-grid" style="margin-top:var(--b-space-16);">
+
+        <div class="b-benefit-card">
+          <h3>
+            <span class="b-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+              </svg>
+            </span>
+            TenantID on Every Query
+          </h3>
+          <p>TenantID is applied as a query-level filter on every database operation. Cross-tenant data access is structurally impossible — not just configuration-dependent.</p>
+        </div>
+
+        <div class="b-benefit-card">
+          <h3>
+            <span class="b-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+              </svg>
+            </span>
+            SHA256 Checksums on All Assets
+          </h3>
+          <p>Every package asset — ZIP archives, exported files, backup snapshots — is fingerprinted with a SHA256 checksum. Integrity is verified at every import and restore.</p>
+        </div>
+
+        <div class="b-benefit-card">
+          <h3>
+            <span class="b-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="12 6 12 12 16 14"></polyline>
+              </svg>
+            </span>
+            Signed URLs with 60-Minute Expiry
+          </h3>
+          <p>All Cloudflare R2 download links are signed and expire after 60 minutes. No permanent public access to package files — every download requires a fresh authorised request.</p>
+        </div>
+
+        <div class="b-benefit-card">
+          <h3>
+            <span class="b-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                <polyline points="14 2 14 8 20 8"></polyline>
+                <line x1="16" y1="13" x2="8" y2="13"></line>
+                <line x1="16" y1="17" x2="8" y2="17"></line>
+              </svg>
+            </span>
+            Full Audit Trail
+          </h3>
+          <p>Every package operation — export, import, version state change, marketplace approval, download — is written to an immutable audit log with actor, timestamp, and outcome.</p>
+        </div>
+
+        <div class="b-benefit-card">
+          <h3>
+            <span class="b-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="3 6 5 6 21 6"></polyline>
+                <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2"></path>
+              </svg>
+            </span>
+            Soft Delete on All Entities
+          </h3>
+          <p>No data is permanently destroyed on first delete. Soft delete preserves every record for recovery and audit. Hard purge is a separate privileged operation.</p>
+        </div>
+
+        <div class="b-benefit-card">
+          <h3>
+            <span class="b-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="7" r="4"></circle>
+                <path d="M5.5 21a8.38 8.38 0 0 1 13 0"></path>
+              </svg>
+            </span>
+            Admin Approval Gate
+          </h3>
+          <p>Marketplace publishing requires admin approval. No package reaches public discovery without an explicit review and sign-off from an authorised administrator.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════════════
+       SECTION 8 — THREE APPLICATIONS
+       ════════════════════════════════════════════════════════════ -->
+  <section class="b-section b-section--default">
+    <div class="b-container">
+      <h2 class="b-section-title">Three Frontend Applications</h2>
+      <p class="b-section-subtitle">InstallHub ships as three purpose-built applications — each scoped to a distinct user role with its own workflow and data access.</p>
+
+      <div class="b-benefits-grid" style="margin-top:var(--b-space-16);">
+
+        <div class="b-benefit-card">
+          <h3>
+            <span class="b-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="16 18 22 12 16 6"></polyline>
+                <polyline points="8 6 2 12 8 18"></polyline>
+              </svg>
+            </span>
+            Creator App
+          </h3>
+          <p>React, Zustand, React Query. Export wizard, import wizard, marketplace discovery and publishing, package management dashboard. The primary interface for data owners and integration engineers.</p>
+        </div>
+
+        <div class="b-benefit-card">
+          <h3>
+            <span class="b-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 20h9"></path>
+                <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path>
+              </svg>
+            </span>
+            Admin App
+          </h3>
+          <p>React. KPI dashboard with analytics, marketplace package approval, system configuration, audit log browser. Built for platform administrators overseeing the entire InstallHub estate.</p>
+        </div>
+
+        <div class="b-benefit-card">
+          <h3>
+            <span class="b-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="9" cy="21" r="1"></circle>
+                <circle cx="20" cy="21" r="1"></circle>
+                <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+              </svg>
+            </span>
+            Marketplace App
+          </h3>
+          <p>Public-facing discovery interface. Browse featured and trending packages, search by category or publisher, download with signed URLs, and leave verified ratings and reviews.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════════════
+       FINAL CTA
+       ════════════════════════════════════════════════════════════ -->
+  <section class="b-section b-cta-section">
+    <div class="b-container">
+      <h2>Ready to manage packages at enterprise scale?</h2>
+      <p>Free to start as part of the BizFirstAi platform.</p>
+      <div class="b-btn-group">
+        <a href="https://bizfirstai.com/website/contact.html" class="b-btn b-btn-primary b-btn-large">Get Started</a>
+        <a href="https://community.bizfirstai.com" class="b-btn b-btn-secondary b-btn-large" target="_blank" rel="noopener">Join Community</a>
+      </div>
+    </div>
+  </section>
+
+  <footer id="footer-container"></footer>
+
+  <script src="./shared-layout.js"></script>
+</body>
+</html>

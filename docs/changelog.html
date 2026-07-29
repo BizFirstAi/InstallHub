@@ -1,0 +1,311 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/png" href="https://bizfirstai.com/website/assets/Logo/logo-m.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="InstallHub Changelog — version history and release notes for the InstallHub enterprise package management system by BizFirstAi.">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="InstallHub Changelog — What's new in every release.">
+  <meta property="og:description" content="Version history and release notes for InstallHub, the enterprise package management system by BizFirstAi.">
+  <meta property="og:type" content="website">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="InstallHub Changelog">
+  <meta name="twitter:description" content="What's new in every release of InstallHub.">
+
+  <title>Changelog — InstallHub by BizFirstAi</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://bizfirstai.com/website/assets/css/b-index.css">
+  <style>
+    body { overflow-x: hidden; }
+
+    /* Hero — centred on all screen sizes */
+    .b-hero-section .b-container { display: flex; flex-direction: column; align-items: center; text-align: center; }
+    .b-hero-section .b-hero-left { max-width: 780px; width: 100%; }
+    .b-hero-section .b-hero-ctas { justify-content: center; }
+    .b-hero-section .b-hero-subheading { max-width: 640px; margin-left: auto; margin-right: auto; }
+
+    /* Benefits grid — 2 columns on tablet, 1 on mobile */
+    .b-benefits-grid { grid-template-columns: repeat(2, 1fr); }
+    @media (max-width: 768px) { .b-benefits-grid { grid-template-columns: 1fr; } }
+
+    /* Prevent cards from overflowing on narrow viewports */
+    .b-benefit-card {
+      overflow: hidden;
+      word-break: break-word;
+      min-width: 0;
+    }
+
+    /* Icon + heading inline alignment */
+    .b-benefit-card h3 {
+      display: flex;
+      align-items: center;
+      gap: 0.625rem;
+      flex-wrap: wrap;
+    }
+
+    .b-icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      width: 1.75rem;
+      height: 1.75rem;
+    }
+
+    .b-icon svg {
+      width: 1.25rem;
+      height: 1.25rem;
+    }
+
+    /* Timeline items — prevent horizontal overflow */
+    .b-timeline__item {
+      overflow: hidden;
+      word-break: break-word;
+    }
+  </style>
+</head>
+<body>
+
+  <header id="header-container"></header>
+
+  <!-- ════════════════════════════════════════════════════════════
+       HERO
+       ════════════════════════════════════════════════════════════ -->
+  <section class="b-hero-section b-hero-bg">
+    <div class="b-container">
+      <div class="b-hero-left">
+        <h1 class="b-hero-headline">InstallHub Changelog</h1>
+        <p class="b-hero-subheading">What's new in every release.</p>
+        <div class="b-hero-ctas">
+          <a href="https://community.bizfirstai.com" class="b-btn b-btn-secondary b-btn-large" target="_blank" rel="noopener">Discuss on Community</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════════════
+       TIMELINE
+       ════════════════════════════════════════════════════════════ -->
+  <section class="b-section b-section--alt">
+    <div class="b-container">
+
+      <div class="b-timeline">
+
+        <!-- v0.3.0 -->
+        <div class="b-timeline__item">
+          <div class="b-timeline__dot"></div>
+          <div class="b-timeline__year">April 2026 &nbsp;&middot;&nbsp; v0.3.0</div>
+          <div class="b-timeline__title">Marketplace</div>
+          <div class="b-timeline__desc">
+            Phase 3 ships the governed marketplace layer. Creators can publish packages from the Creator App through an admin approval workflow. The Marketplace App provides full-text discovery, signed download URLs via Cloudflare R2, download tracking, trending analytics, 5-star ratings, written reviews, and publisher reputation badges.
+          </div>
+
+          <div class="b-benefits-grid" style="margin-top: var(--b-space-8);">
+            <div class="b-benefit-card">
+              <h3>
+                <span class="b-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"></path>
+                  </svg>
+                </span>
+                Cloudflare R2 Signed URLs
+              </h3>
+              <p>All marketplace downloads are served via time-limited signed URLs from Cloudflare R2. URLs expire after 60 minutes — no permanent public package access.</p>
+            </div>
+
+            <div class="b-benefit-card">
+              <h3>
+                <span class="b-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="18" y1="20" x2="18" y2="10"></line>
+                    <line x1="12" y1="20" x2="12" y2="4"></line>
+                    <line x1="6" y1="20" x2="6" y2="14"></line>
+                  </svg>
+                </span>
+                Download Tracking &amp; Trending Analytics
+              </h3>
+              <p>Every download is logged to MarketplaceDownloadLog. Trending packages surface by download count. Publishers see per-package analytics and earnings tracking.</p>
+            </div>
+
+            <div class="b-benefit-card">
+              <h3>
+                <span class="b-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 20h9"></path>
+                    <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path>
+                  </svg>
+                </span>
+                Admin Approval Workflow
+              </h3>
+              <p>Packages submitted for publishing are reviewed and approved by administrators before appearing in the marketplace. Rejected submissions include admin feedback.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- v0.2.0 -->
+        <div class="b-timeline__item">
+          <div class="b-timeline__dot"></div>
+          <div class="b-timeline__year">March 2026 &nbsp;&middot;&nbsp; v0.2.0</div>
+          <div class="b-timeline__title">Import System</div>
+          <div class="b-timeline__desc">
+            Phase 2 ships the full import pipeline. DependencyResolutionService handles topological sorting and cycle detection at 99.9% accuracy. ConflictResolutionService implements Merge, Overwrite, and Skip strategies. BackupRestoreService provides automatic pre-import snapshots with atomic rollback. ZipValidationService validates every uploaded package before a handler is invoked. 20 specialized import handlers cover every entity type in the platform.
+          </div>
+
+          <div class="b-benefits-grid" style="margin-top: var(--b-space-8);">
+            <div class="b-benefit-card">
+              <h3>
+                <span class="b-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="5" r="3"></circle>
+                    <circle cx="5" cy="19" r="3"></circle>
+                    <circle cx="19" cy="19" r="3"></circle>
+                    <line x1="12" y1="8" x2="5" y2="16"></line>
+                    <line x1="12" y1="8" x2="19" y2="16"></line>
+                  </svg>
+                </span>
+                DependencyResolutionService
+              </h3>
+              <p>Automatic dependency graph construction with topological sort, circular dependency detection (99.9% accuracy), and missing dependency detection before any import starts.</p>
+            </div>
+
+            <div class="b-benefit-card">
+              <h3>
+                <span class="b-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="8" y1="6" x2="21" y2="6"></line>
+                    <line x1="8" y1="12" x2="21" y2="12"></line>
+                    <line x1="8" y1="18" x2="21" y2="18"></line>
+                    <line x1="3" y1="6" x2="3.01" y2="6"></line>
+                    <line x1="3" y1="12" x2="3.01" y2="12"></line>
+                    <line x1="3" y1="18" x2="3.01" y2="18"></line>
+                  </svg>
+                </span>
+                ConflictResolutionService
+              </h3>
+              <p>Three conflict strategies: Merge (recursive intelligent merge), Overwrite (replace all), Skip (keep existing). Configurable globally or per entity type.</p>
+            </div>
+
+            <div class="b-benefit-card">
+              <h3>
+                <span class="b-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"></path>
+                    <path d="M3 3v5h5"></path>
+                  </svg>
+                </span>
+                BackupRestoreService
+              </h3>
+              <p>Pre-import database snapshots with GZip compression (3–5x reduction), SHA256 integrity verification, configurable retention (7–730 days), and atomic rollback on failure.</p>
+            </div>
+
+            <div class="b-benefit-card">
+              <h3>
+                <span class="b-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                  </svg>
+                </span>
+                ZipValidationService
+              </h3>
+              <p>Manifest validation, SHA256 checksum verification, and archive structure validation on every uploaded package — before any handler is invoked.</p>
+            </div>
+
+            <div class="b-benefit-card">
+              <h3>
+                <span class="b-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="16 18 22 12 16 6"></polyline>
+                    <polyline points="8 6 2 12 8 18"></polyline>
+                  </svg>
+                </span>
+                20 Import Handlers
+              </h3>
+              <p>Specialized handlers for every entity type: FormHandler, TableHandler, ConfigHandler, TemplateHandler, ScriptHandler, DataHandler, ViewHandler, StoredProcHandler, TriggerHandler, IndexHandler, and 10 more.</p>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- v0.1.0 -->
+        <div class="b-timeline__item">
+          <div class="b-timeline__dot"></div>
+          <div class="b-timeline__year">February 2026 &nbsp;&middot;&nbsp; v0.1.0</div>
+          <div class="b-timeline__title">Export System</div>
+          <div class="b-timeline__desc">
+            The first production release of InstallHub ships Phase 1 in full. The complete export pipeline is production-ready: 4-step wizard, three source types (Database, File, API), semantic versioning with Draft/Released/Archived lifecycle, Cloudflare R2 storage, SHA256 checksums on all assets, multi-tenant isolation, and a complete audit trail. 15,000+ lines of code. 84+ tests at 86% coverage. SOLID Principles Score 9.2/10. Architecture Score 9.5/10.
+          </div>
+
+          <div class="b-benefits-grid" style="margin-top: var(--b-space-8);">
+            <div class="b-benefit-card">
+              <h3>
+                <span class="b-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                    <line x1="9" y1="9" x2="15" y2="9"></line>
+                    <line x1="9" y1="12" x2="15" y2="12"></line>
+                    <line x1="9" y1="15" x2="13" y2="15"></line>
+                  </svg>
+                </span>
+                Full Export Pipeline
+              </h3>
+              <p>4-step export wizard (Source Selection, Field Mapping, Schedule, Review &amp; Submit) covering Database, File, and API source types. Production-ready on first release.</p>
+            </div>
+
+            <div class="b-benefit-card">
+              <h3>
+                <span class="b-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <polyline points="12 6 12 12 16 14"></polyline>
+                  </svg>
+                </span>
+                Semantic Versioning
+              </h3>
+              <p>Full semver with Draft, Released, and Archived states. Per-version release notes, checksums, and asset URLs. 8 core entities with complete relationship modelling.</p>
+            </div>
+
+            <div class="b-benefit-card">
+              <h3>
+                <span class="b-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+                  </svg>
+                </span>
+                84+ Tests, 86% Coverage
+              </h3>
+              <p>15,000+ lines of code. 84+ automated tests at 86% coverage. SOLID Principles Score 9.2/10. Architecture Score 9.5/10. 50+ API endpoints across 3 applications.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════════════
+       CTA
+       ════════════════════════════════════════════════════════════ -->
+  <section class="b-section b-cta-section">
+    <div class="b-container">
+      <h2>Start managing packages.</h2>
+      <p>Free to start as part of the BizFirstAi platform.</p>
+      <div class="b-btn-group">
+        <a href="https://bizfirstai.com/website/contact.html" class="b-btn b-btn-primary b-btn-large">Get Started</a>
+        <a href="https://community.bizfirstai.com" class="b-btn b-btn-secondary b-btn-large" target="_blank" rel="noopener">Join Community</a>
+      </div>
+    </div>
+  </section>
+
+  <footer id="footer-container"></footer>
+
+  <script src="./shared-layout.js"></script>
+</body>
+</html>

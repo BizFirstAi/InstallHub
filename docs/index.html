@@ -1,0 +1,233 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/png" href="https://bizfirstai.com/website/assets/Logo/logo-m.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="InstallHub — Enterprise package management by BizFirstAi. Export data from any source, import with automatic conflict resolution, and publish packages across your organisation.">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="InstallHub — Enterprise Package Management by BizFirstAi">
+  <meta property="og:description" content="Export data from any source. Import with automatic conflict resolution. Publish and discover packages across your organisation.">
+  <meta property="og:type" content="website">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="InstallHub — Enterprise Package Management">
+  <meta name="twitter:description" content="Export, import, and publish packages with enterprise-grade reliability.">
+
+  <title>InstallHub — Enterprise Package Management by BizFirstAi</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://bizfirstai.com/website/assets/css/b-index.css">
+  <style>
+    body { overflow-x: hidden; }
+
+    /* Hero — centred on all screen sizes */
+    .b-hero-section .b-container { display: flex; flex-direction: column; align-items: center; text-align: center; }
+    .b-hero-section .b-hero-left { max-width: 780px; width: 100%; }
+    .b-hero-section .b-hero-ctas { justify-content: center; }
+    .b-hero-section .b-hero-subheading { max-width: 640px; margin-left: auto; margin-right: auto; }
+
+    /* Stat bar — wrap on narrow viewports */
+    .b-differentiators__strip { flex-wrap: wrap; gap: var(--b-space-6, 1.5rem); }
+
+    /* Benefits grid — 3 col desktop, 2 col tablet, 1 col mobile */
+    .b-benefits-grid { grid-template-columns: repeat(3, 1fr); }
+    @media (max-width: 900px) { .b-benefits-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 600px) { .b-benefits-grid { grid-template-columns: 1fr; } }
+
+    /* Prevent cards from overflowing on narrow viewports */
+    .b-benefit-card { overflow: hidden; word-break: break-word; min-width: 0; }
+
+    /* Icon + heading inline alignment */
+    .b-benefit-card h3 { display: flex; align-items: center; gap: 0.625rem; flex-wrap: wrap; }
+    .b-icon { display: inline-flex; align-items: center; justify-content: center; flex-shrink: 0; width: 1.75rem; height: 1.75rem; }
+    .b-icon svg { width: 1.25rem; height: 1.25rem; }
+  </style>
+</head>
+<body>
+
+  <header id="header-container"></header>
+
+  <!-- ════════════════════════════════════════════════════════════
+       HERO
+       ════════════════════════════════════════════════════════════ -->
+  <section class="b-hero-section b-hero-bg">
+    <div class="b-container">
+      <div class="b-hero-left">
+        <h1 class="b-hero-headline">Enterprise Package Management.</h1>
+        <p class="b-hero-subheading">Export data from any source. Import with automatic conflict resolution. Publish and discover packages across your organisation.</p>
+        <div class="b-hero-ctas">
+          <a href="./features.html" class="b-btn b-btn-primary b-btn-large">Explore Features</a>
+          <a href="./docs.html" class="b-btn b-btn-secondary b-btn-large">Read the Docs</a>
+        </div>
+        <p class="b-hero-trust">Part of the BizFirstAi platform &middot; Production-ready Phase 1</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════════════
+       STAT BAR
+       ════════════════════════════════════════════════════════════ -->
+  <section class="b-section b-section--sm b-section--alt">
+    <div class="b-container">
+      <div class="b-differentiators__strip">
+        <div class="b-differentiators__stat">
+          <div class="b-differentiators__number">86%</div>
+          <div class="b-differentiators__label">Test Coverage</div>
+        </div>
+        <div class="b-differentiators__stat">
+          <div class="b-differentiators__number">50+</div>
+          <div class="b-differentiators__label">API Endpoints</div>
+        </div>
+        <div class="b-differentiators__stat">
+          <div class="b-differentiators__number">20</div>
+          <div class="b-differentiators__label">Import Handlers</div>
+        </div>
+        <div class="b-differentiators__stat">
+          <div class="b-differentiators__number">3</div>
+          <div class="b-differentiators__label">Integrated Phases</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════════════
+       WHAT IS INSTALLHUB
+       ════════════════════════════════════════════════════════════ -->
+  <section class="b-section b-section--alt">
+    <div class="b-container">
+      <h2 class="b-section-title">What is InstallHub?</h2>
+      <p class="b-section-subtitle">InstallHub is a three-phase enterprise package management system: Export, Import, and Marketplace — each built for production scale and governed automation.</p>
+
+      <div class="b-benefits-grid" style="margin-top:var(--b-space-16);">
+
+        <div class="b-benefit-card">
+          <h3>
+            <span class="b-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                <polyline points="7 10 12 15 17 10"></polyline>
+                <line x1="12" y1="15" x2="12" y2="3"></line>
+              </svg>
+            </span>
+            Export Packages
+          </h3>
+          <p>Extract data from Database, File, or API sources into versioned, dependency-tracked ZIP packages. 4-step wizard. 100% production-ready.</p>
+        </div>
+
+        <div class="b-benefit-card">
+          <h3>
+            <span class="b-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                <polyline points="17 8 12 3 7 8"></polyline>
+                <line x1="12" y1="3" x2="12" y2="15"></line>
+              </svg>
+            </span>
+            Import with Confidence
+          </h3>
+          <p>Upload any package, resolve conflicts automatically, roll back if anything goes wrong. 3 conflict strategies. Atomic rollback.</p>
+        </div>
+
+        <div class="b-benefit-card">
+          <h3>
+            <span class="b-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="9" cy="21" r="1"></circle>
+                <circle cx="20" cy="21" r="1"></circle>
+                <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+              </svg>
+            </span>
+            Publish and Discover
+          </h3>
+          <p>A governed marketplace for sharing reusable packages across teams. Approval workflow, ratings, trending analytics.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════════════
+       THREE PHASES
+       ════════════════════════════════════════════════════════════ -->
+  <section class="b-section b-section--default">
+    <div class="b-container">
+      <h2 class="b-section-title">Three integrated phases.</h2>
+      <p class="b-section-subtitle">InstallHub is built in three production phases, each adding a complete layer of package management capability.</p>
+
+      <div class="b-benefits-grid" style="margin-top:var(--b-space-16);">
+
+        <div class="b-benefit-card">
+          <h3>
+            <span class="b-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+              </svg>
+            </span>
+            Phase 1 — Export
+          </h3>
+          <p>
+            <strong style="color: var(--b-color-primary);">100% Complete — Production Ready</strong><br>
+            Full export pipeline with 4-step wizard, semantic versioning, Cloudflare R2 storage, SHA256 checksums, and complete audit trail. 84+ tests, 86% coverage.
+          </p>
+        </div>
+
+        <div class="b-benefit-card">
+          <h3>
+            <span class="b-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+              </svg>
+            </span>
+            Phase 2 — Import
+          </h3>
+          <p>
+            <strong style="color: var(--b-color-primary);">95% Complete — Near Production</strong><br>
+            20 specialized import handlers, DependencyResolutionService, ConflictResolutionService with 3 strategies, and BackupRestoreService with atomic rollback.
+          </p>
+        </div>
+
+        <div class="b-benefit-card">
+          <h3>
+            <span class="b-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+              </svg>
+            </span>
+            Phase 3 — Marketplace
+          </h3>
+          <p>
+            <strong style="color: var(--b-color-primary);">60% Complete — In Progress</strong><br>
+            Admin approval workflow, full-text search, signed download URLs via Cloudflare R2, download tracking, 5-star ratings, and publisher reputation badges.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════════════
+       FINAL CTA
+       ════════════════════════════════════════════════════════════ -->
+  <section class="b-section b-cta-section">
+    <div class="b-container">
+      <h2>Start managing packages.</h2>
+      <p>Free to start as part of the BizFirstAi platform.</p>
+      <div class="b-btn-group">
+        <a href="https://bizfirstai.com/website/contact.html" class="b-btn b-btn-primary b-btn-large">Get Started</a>
+        <a href="https://community.bizfirstai.com" class="b-btn b-btn-secondary b-btn-large" target="_blank" rel="noopener">Join Community</a>
+      </div>
+    </div>
+  </section>
+
+  <footer id="footer-container"></footer>
+
+  <script src="./shared-layout.js"></script>
+</body>
+</html>

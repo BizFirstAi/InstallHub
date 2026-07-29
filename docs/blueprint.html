@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/png" href="https://bizfirstai.com/website/assets/Logo/logo-m.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="InstallHub Blueprint — Technical architecture and product overview by BizFirstAi.">
+  <title>Blueprint — InstallHub by BizFirstAi</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://bizfirstai.com/website/assets/css/b-index.css">
+  <style>
+    html, body { margin: 0; padding: 0; height: 100%; overflow: hidden; overflow-x: hidden; }
+    .pdf-wrap { display: flex; flex-direction: column; height: calc(100vh - 60px); min-height: 400px; }
+    .pdf-wrap iframe { flex: 1; border: none; width: 100%; max-width: 100%; display: block; min-height: 0; }
+    @media (max-width: 768px) {
+      .pdf-wrap { height: calc(100dvh - 60px); }
+    }
+  </style>
+</head>
+<body>
+  <header id="header-container"></header>
+
+  <div class="pdf-wrap">
+    <iframe
+      src="./130_InstallHub_Technical_Architecture.pdf#toolbar=0&navpanes=0&scrollbar=0&view=FitH"
+      title="InstallHub Blueprint — Technical Architecture"
+      aria-label="InstallHub Blueprint PDF Viewer">
+    </iframe>
+  </div>
+
+  <footer id="footer-container"></footer>
+  <script src="./shared-layout.js"></script>
+</body>
+</html>
